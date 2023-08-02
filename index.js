@@ -1,25 +1,32 @@
 
-// calculadora de precios
+// Simulador de   suma de items y listado de items
 
-let calculadora = 0;
+const items = [
+      { nombre: "GPU", precio: 1000, disponibilidad: 20 },
+     { nombre: "CPU", precio: 500, disponibilidad: 10 },
+     { nombre: "RAM", precio: 100, disponibilidad: 5},
+      { nombre: "Disco", precio: 100, disponibilidad: 0},
+     ];
 
-let precios = [];
 
-let precioEstimado = parseInt(prompt("Indique el precio"));
 
-let precioTotal = 0
-console.log(precios);
+     const items2 = items.map( item => {
+        item = {
+            nombre: item.nombre,
+            precio: item.precio,
+            disponibilidad: item.disponibilidad
+            }
+             
+        return item; 
+     })
+ console.log(items2);
 
-precios.push(precioEstimado);
+const busquedaItems =  prompt("Ingrese el item  que desea ver");
 
-console.log(precios);
+const resultado = items.find( item => item.nombre.toLowerCase() === busquedaItems.toLowerCase());
 
-let preciofinal = parseInt(prompt("Indique el precio"));
-
- precios.push(preciofinal);
-
- console.log(precios);
-
- const total = precios.reduce((acumulador, elemento) => acumulador + elemento, 0)
-
- alert("el precio final es " + total);
+if(resultado) {
+ alert(`El Item solicitado:\nNombre: ${resultado.nombre}\nPrecio: ${resultado.precio}\nDisponibilidad ${resultado.disponibilidad} `)
+ } else {
+  alert("No se encontro el Item buscado")
+ }
