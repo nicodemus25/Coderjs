@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+header{
+    text-align: center;
+
+
+}
+h1{
+    color: antiquewhite;
+}
+h2{
+    color: antiquewhite;
+}
+
+
+.card {
+    border: 4px inset rgba(211, 211, 211, 0.384);
+    border-radius: 2px;
+    height: 300px;
+    width: 200px;
+    margin: 20px ;
+    background-color: white;
+    ;
+}
+
+
+body{
+    background-image:url(../img/HD-wallpaper-metal-grid-metal-texture-grid-pattern-gray-background-metal-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.center {
+    text-align: center;
+}
