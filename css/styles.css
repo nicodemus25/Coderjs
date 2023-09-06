@@ -36,4 +36,87 @@ body{
 
 .center {
     text-align: center;
+    color: antiquewhite;
+    margin-top: 10px;
 }
+
+.card {
+    border: 4px inset rgba(211, 211, 211, 0.384);
+    border-radius: 2px;
+    height: 550px;
+    width: 200px;
+    background-color: white;
+    ;
+}
+
+.card .card-image {
+    text-align: center;
+    font-size: 20px;
+    display: block;
+
+}
+
+.card .card-name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    display: block;
+    width: 1fr;
+}
+
+.card .card-price {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    display: block;
+    width: 1fr;
+}
+
+
+.card .card-button {
+    text-align: center;
+    display: block;
+    background-color: white;
+    
+
+}
+.button-add {
+    display: block;
+    border-radius: 10px;
+    outline: 1px solid red !important;
+    align-items: baseline;
+}
+.container {
+    gap: 30px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.centerTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;  
+    font-size: 15px;
+    color: white;
+    
+  }
+
+  .button-add {
+    display: block;
+    border-radius: 10px;
+    outline: 1px solid red !important;
+    align-items: baseline;
+}
+
+.centrarB{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    align-items: center;
+    margin-bottom: 50px;
+    
+  }

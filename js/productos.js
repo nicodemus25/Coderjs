@@ -2,8 +2,9 @@ const container = document.querySelector("#productos");
 const carritoElemento = document.querySelector("#carrito");
 
 const productosCarritos = []
-let indexCarro =  []
+let indexCarro = recuperarCarrito() || []
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
 
 
 
@@ -31,7 +32,7 @@ async function agregarProductos()
 function templateSandwich(sandwiches)
 {
     return `<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="${sandwiches.img}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">${sandwiches.nombre}</h5>
       <p class="card-text">${sandwiches.desc}</p>
@@ -71,7 +72,7 @@ function asignarClicks(){
 
     function agregarAlCarrito(prod)
     {
-        let nuevoProd = {desc: prod.desc, id: prod.id, nombre: prod.nombre, cantidad : 1, precio : prod.precio}
+        let nuevoProd = {desc: prod.desc, id: prod.id, nombre: prod.nombre, cantidad : 1, precio : prod.precio, img:prod.img}
         let posicion = indexCarro.findIndex(producto=> producto.nombre === prod.nombre)
         if(posicion !== -1){
             indexCarro[posicion].cantidad++
@@ -86,6 +87,9 @@ function asignarClicks(){
     }
 
 }
+
+
+
 agregarProductos()
     
 
